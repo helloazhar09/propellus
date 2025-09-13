@@ -1,0 +1,111 @@
+// components/TravelAgentLove.jsx
+"use client";
+
+import Image from 'next/image';
+import Link from 'next/link';
+
+const TravelAgentLove = () => {
+  return (
+    <>
+      {/* Testimonial Section */}
+      <div className="bg-gray-50 py-12 px-6 sm:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+              Why Travel Agents Love Propellus
+            </h2>
+            <div className="flex space-x-2">
+              <button className="p-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button className="p-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-12 p-8 bg-white rounded-3xl shadow-lg">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-48 lg:h-48 rounded-2xl overflow-hidden flex-shrink-0 mb-6 lg:mb-0">
+              <Image
+                src="/images/person.png"
+                alt="Sultan Ali"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-2xl"
+              />
+            </div>
+            <div className="relative text-center lg:text-left flex-grow">
+              {/* Large quotation mark */}
+              <div className="absolute top-0 left-0 -ml-8 -mt-10 lg:-ml-12 lg:-mt-12 text-6xl sm:text-7xl lg:text-8xl font-extrabold text-gray-200 opacity-75 select-none z-0">
+                “
+              </div>
+              <div className="relative z-10 text-2xl sm:text-3xl font-semibold text-gray-800 italic leading-relaxed pt-8 lg:pt-0">
+                Propellus has made our and our travelers lives easier.
+              </div>
+              <div className="mt-6 font-semibold text-gray-900">
+                Sultan Ali
+              </div>
+              <div className="text-sm text-gray-500">
+                Prince Visa
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+ 
+
+{/* Call-to-Action (CTA) Section */}
+<div className="bg-slate-800 text-white py-12 px-6 sm:px-12 lg:px-24 overflow-hidden relative">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
+    <div className="text-center md:text-left mb-8 md:mb-0">
+      <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+        Process your first 5 visa <br /> applications for <span className="text-cyan-400">£0</span>
+      </div>
+      <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <Link href="/request-call">
+          <button className="bg-cyan-400 hover:bg-cyan-500 text-slate-800 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+            Request a Call
+          </button>
+        </Link>
+        <Link href="/view-demo">
+          <button className="border-2 border-white hover:bg-white hover:text-slate-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+            View Live Demo
+          </button>
+        </Link>
+      </div>
+    </div>
+    <div className="relative w-full max-w-sm md:max-w-md h-56 md:h-64">
+      <Image
+        src="/images/group.png"
+        alt="World map with location pins"
+        layout="fill"
+        objectFit="contain"
+      />
+    </div>
+  </div>
+
+  {/* Arrow Vector Image - Moved further upward */}
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-auto md:bottom-[15%] md:left-[55%] md:-translate-x-0 md:translate-y-0 lg:left-[50%] w-40 h-auto sm:w-56 lg:w-64 opacity-70 z-0">
+    <Image
+      src="/images/Vector.png" // Assumes Vector.png is in public/images/
+      alt="Arrow pointing to map"
+      width={250}
+      height={150}
+      layout="responsive"
+      objectFit="contain"
+    />
+  </div>
+</div>
+
+ 
+   
+ 
+    </>
+  );
+};
+
+export default TravelAgentLove;
