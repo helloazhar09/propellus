@@ -1,7 +1,7 @@
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/navbar";
 import GetStartedComponent from "../components/QTAs/contactform";
- import PropellusUnfairAdvantage from "../components/QTAs/fairadventure";
+import FeatureCard from "../components/QTAs/fairadventure"; 
 import PropellusFeatures from "../components/QTAs/features";
 import TravelVisaSection from "../components/QTAs/herosection";
 import PropellusMetricsAndValues from "../components/QTAs/values";
@@ -14,7 +14,8 @@ const QTApage = () => {
         <Navbar/>
        <TravelVisaSection/>
        <PropellusFeatures/>
-       <PropellusUnfairAdvantage/>
+       <FeatureCard/>
+       {/* <PropellusUnfairAdvantage/> */}
        <VisaIntegrationSection/>
        <PropellusMetricsAndValues/>
        <GetStartedComponent/>
