@@ -39,7 +39,7 @@ const Navbar = () => {
               Travel Agents
             </Link>
             <Link 
-              href="#" 
+              href="/QTAS" 
               className="text-gray-700 hover:text-gray-900 font-medium"
             >
               OTAs
