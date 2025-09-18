@@ -1,33 +1,93 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import Image from "next/image";
+import React from "react";
+import ImageCarousel, { Slide } from "@/app/about/ImageCarousel";
+
+const aboutSlides: Slide[] = [
+  {
+    src: "/images/img1.jpg",
+    alt: "Pic 1",
+    heading: "Customer first",
+    description:
+      "We prioritize our customers&apos needs and strive to exceed their expectations at every point.",
+  },
+  {
+    src: "/images/img2.jpg",
+    alt: "Image2",
+    heading: " Transparency",
+    description:
+      "We believe in being honest, ethical, and transparent in all our interactions,.",
+  },
+  {
+    src: "/images/img3.jpg",
+    alt: "Image3",
+    heading: "Ownership",
+    description:
+      "We take responsibility for our actions, decisions, and outcomes, .",
+  },
+  {
+    src: "/images/img4.jpg",
+    alt: "Image4",
+    heading: "Quality",
+    description:
+      "We are dedicated to providing high-quality products and services",
+  },
+];
+>>>>>>> c15769c (strapi)
 
 const PropellusMetricsAndValues = () => {
   return (
     <div className="bg-white">
       {/* Top Section */}
+<<<<<<< HEAD
       <section className="bg-[#1C3F5D] text-white p-6 md:p-12 lg:p-24">
+=======
+      <section className="bg-[#1C3F5D] text-white p-6 md:p-12 lg:p-24 relative">
+>>>>>>> c15769c (strapi)
         <div className="container mx-auto text-center">
           <p className="text-sm uppercase font-semibold text-gray-300 tracking-wider mb-2">
             How We Help
           </p>
+<<<<<<< HEAD
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-8">
+=======
+          <h2 className="max-w-[900px] mx-auto text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-8">
+>>>>>>> c15769c (strapi)
             Enabling travel agents to scale fulfillment and reduce business cost
           </h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-6">
             <div className="bg-white rounded-xl p-6 w-full max-w-xs text-center">
+<<<<<<< HEAD
               <h3 className="text-3xl font-bold text-[#1C3F5D]">60%</h3>
               <p className="text-sm font-light mt-2 text-[#1C3F5D]">
+=======
+              <h3 className="text-[44px] font-bold text-[#1C3F5D]">60%</h3>
+              <p className="text-[16px] font-light mt-2 text-[#1C3F5D]">
+>>>>>>> c15769c (strapi)
                 Reduction in payroll cost
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 w-full max-w-xs text-center">
+<<<<<<< HEAD
               <h3 className="text-3xl font-bold text-[#1C3F5D]">500%</h3>
               <p className="text-sm font-light mt-2 text-[#1C3F5D]">
+=======
+              <h3 className="text-[44px] font-bold text-[#1C3F5D]">500%</h3>
+              <p className="text-[16px] font-light mt-2 text-[#1C3F5D]">
+>>>>>>> c15769c (strapi)
                 Increase in productivity
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 w-full max-w-xs text-center">
+<<<<<<< HEAD
               <h3 className="text-3xl font-bold text-[#1C3F5D]">70%</h3>
               <p className="text-sm font-light mt-2 text-[#1C3F5D]">
+=======
+              <h3 className="text-[44px] font-bold text-[#1C3F5D]">70%</h3>
+              <p className="text-[16px] font-light mt-2 text-[#1C3F5D]">
+>>>>>>> c15769c (strapi)
                 Fewer errors in document validation
               </p>
             </div>
@@ -35,6 +95,7 @@ const PropellusMetricsAndValues = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Bottom Section */}
       <section className="bg-white p-6 md:p-12 lg:p-24">
         <div className="container mx-auto">
@@ -91,6 +152,15 @@ const PropellusMetricsAndValues = () => {
               </p>
             </div>
           </div>
+=======
+      <section className="px-4 mb-28 mt-28">
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <h2 className="text-xl text-[#6A6A6A] mb-2">HOW IT WORKS</h2>
+          <p className="text-3xl md:text-[44px] text-gray-800">What We Value</p>
+        </div>
+        <div className="max-w-[1250px] mx-auto">
+          <ImageCarousel slides={aboutSlides} speed={40} />
+>>>>>>> c15769c (strapi)
         </div>
       </section>
     </div>

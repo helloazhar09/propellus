@@ -99,7 +99,11 @@ export default function TravelVisaSection() {
                   placeholder="e.g John Doe"
                   value={form.name}
                   onChange={handleChange}
+<<<<<<< HEAD
                   className="w-full border border-gray-300 rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                  className="w-full text-black placeholder:text-black border border-gray-300 rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> c15769c (strapi)
                   required
                 />
               </div>
@@ -117,7 +121,11 @@ export default function TravelVisaSection() {
                   placeholder="johndoe@gmail.com"
                   value={form.email}
                   onChange={handleChange}
+<<<<<<< HEAD
                   className="w-full border border-gray-300 rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                  className="w-full text-black placeholder:text-black border border-gray-300 rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> c15769c (strapi)
                   required
                 />
               </div>
@@ -137,7 +145,11 @@ export default function TravelVisaSection() {
                 placeholder="Type your message here"
                 value={form.message}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className="w-full border border-gray-300 rounded-md p-2 h-20 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                className="w-full border text-black placeholder:text-black border-gray-300 rounded-md p-2 h-20 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> c15769c (strapi)
                 required
               />
             </div>

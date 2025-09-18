@@ -1,4 +1,8 @@
 "use client";
+<<<<<<< HEAD
+=======
+import Image from "next/image";
+>>>>>>> c15769c (strapi)
 import React from "react";
 
 const HeroSection = () => {
@@ -10,10 +14,23 @@ const HeroSection = () => {
           <div className="flex justify-between items-center h-14">
             <h2 className="text-lg font-medium">Travel Agents</h2>
             <div className="flex items-center space-x-6">
+<<<<<<< HEAD
               <a href="#" className="text-white hover:text-gray-200 font-medium">
                 Pricing
               </a>
               <a href="#" className="text-white hover:text-gray-200 font-medium">
+=======
+              <a
+                href="#"
+                className="text-white hover:text-gray-200 font-medium"
+              >
+                Pricing
+              </a>
+              <a
+                href="#"
+                className="text-white hover:text-gray-200 font-medium"
+              >
+>>>>>>> c15769c (strapi)
                 View Live Demo
               </a>
               <button className="bg-white text-slate-700 px-4 py-2 rounded font-medium hover:bg-gray-100 transition-colors">
@@ -28,12 +45,18 @@ const HeroSection = () => {
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-16">
         {/* Main Heading */}
         <div className="text-center mb-12">
+<<<<<<< HEAD
           <h1 className="text-white text-[32px] md:text-[40px] lg:text-[48px] font-normal leading-tight mb-4">
             Visa Application Solution
           </h1>
           <h2 className="text-white text-[24px] md:text-[28px] lg:text-[32px] font-normal leading-tight">
             For Travel Agents in London
           </h2>
+=======
+          <h1 className="text-white text-[32px] max-w-[900px] md:text-[60px] lg:text-[64px] font-bold leading-tight ">
+            Visa Application Solution For Travel Agents in London
+          </h1>
+>>>>>>> c15769c (strapi)
         </div>
 
         {/* Action Buttons */}
@@ -48,6 +71,7 @@ const HeroSection = () => {
 
         {/* Trusted By Section */}
         <div className="text-center">
+<<<<<<< HEAD
           <h3 className="text-white text-sm font-medium mb-6 tracking-wide uppercase">
             Trusted by leading travel agencies
           </h3>
@@ -70,6 +94,20 @@ const HeroSection = () => {
             {/* MakeMyTrip Logo */}
             <div className="text-white text-xl font-bold">
               MakeMyTrip
+=======
+          <h2 className="text-black text-[18px] md:text-[24px] font-normal mb-8 tracking-wide">
+            TRUSTED BY LEADING TRAVEL AGENCIES
+          </h2>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
+            <div className="flex flex-wrap justify-center items-center ">
+              <Image
+                src={"/logos.svg"}
+                alt="Logo 1"
+                width={120}
+                height={40}
+                className="object-contain w-full h-auto"
+              />
+>>>>>>> c15769c (strapi)
             </div>
           </div>
         </div>
@@ -78,4 +116,8 @@ const HeroSection = () => {
   );
 };
 
+<<<<<<< HEAD
 export default HeroSection;
+=======
+export default HeroSection;
+>>>>>>> c15769c (strapi)

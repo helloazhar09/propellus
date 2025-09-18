@@ -15,13 +15,21 @@ const VisaProcessingSection = () => {
             with Propellus
           </h3>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
             A fully automated online shopfront driving 2x growth in new customers to your website with dynamic SEO, beautifully 
             showcasing your services, displaying visa requirements, and enabling visa applications in just a few clicks!
+=======
+            A fully automated online shopfront driving 2x growth in new
+            customers to your website with dynamic SEO, beautifully showcasing
+            your services, displaying visa requirements, and enabling visa
+            applications in just a few clicks!
+>>>>>>> c15769c (strapi)
           </p>
         </div>
 
         {/* Image Section with Blue Border */}
         <div className="flex justify-center">
+<<<<<<< HEAD
           <div className="relative">
             {/* Blue border container */}
             <div className="border-4 border-blue-400 rounded-lg p-2 bg-white shadow-lg">
@@ -37,10 +45,24 @@ const VisaProcessingSection = () => {
             {/* Optional: Add a subtle shadow effect */}
             <div className="absolute -inset-2 bg-blue-100 rounded-lg -z-10 opacity-50"></div>
           </div>
+=======
+          {/* Blue border container */}
+          <Image
+            src="/new.png"
+            alt="TravelAgents Dashboard Interface"
+            width={1200}
+            height={800}
+            className="w-full max-w-8xl object-contain "
+          />
+>>>>>>> c15769c (strapi)
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default VisaProcessingSection;
+=======
+export default VisaProcessingSection;
+>>>>>>> c15769c (strapi)

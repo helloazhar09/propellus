@@ -89,7 +89,13 @@ const LoginPage = () => {
                     type="button"
                     onClick={togglePasswordVisibility}
                     className="text-gray-400 hover:text-gray-600 focus:outline-none"
+<<<<<<< HEAD
                     aria-label={showPassword ? "Hide password" : "Show password"}
+=======
+                    aria-label={
+                      showPassword ? "Hide password" : "Show password"
+                    }
+>>>>>>> c15769c (strapi)
                   >
                     {showPassword ? (
                       <EyeSlashIcon className="h-5 w-5" />
@@ -159,7 +165,11 @@ const LoginPage = () => {
           <div className="text-center text-sm text-gray-500 mt-4">
             Don&apos;t have an account?{" "}
             <a
+<<<<<<< HEAD
               href="#"
+=======
+              href="/signup"
+>>>>>>> c15769c (strapi)
               className="font-medium text-blue-600 hover:text-blue-500"
             >
               Create

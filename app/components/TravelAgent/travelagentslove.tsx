@@ -1,10 +1,77 @@
 // components/TravelAgentLove.jsx
 "use client";
 
+<<<<<<< HEAD
 import Image from 'next/image';
 import Link from 'next/link';
 
 const TravelAgentLove = () => {
+=======
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { TestimonialData } from '../../types/strapi';
+
+const TravelAgentLove = () => {
+  const [testimonial, setTestimonial] = useState<TestimonialData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTestimonial = async () => {
+      try {
+        const response = await fetch('/api/strapi-data');
+        const data = await response.json();
+        console.log('TravelAgentLove data received:', data);
+        
+        // Check if we got an error response from the API
+        if (data.error) {
+          console.warn('Strapi connection failed:', data.error);
+          console.warn('Using fallback testimonial data');
+          setTestimonial({
+            author_name: "Sultan Ali",
+            description: "Propellus has made our and our travelers lives easier.",
+            country_name: "Prince Visa"
+          });
+        } else if (data.testimonials && Array.isArray(data.testimonials) && data.testimonials.length > 0) {
+          console.log('Using Strapi testimonial data');
+          // Use the first testimonial for this component
+          setTestimonial(data.testimonials[0]);
+        } else {
+          console.warn('No testimonials found in Strapi data, using fallback');
+          setTestimonial({
+            author_name: "Sultan Ali",
+            description: "Propellus has made our and our travelers lives easier.",
+            country_name: "Prince Visa"
+          });
+        }
+      } catch (error) {
+        console.error('Error fetching testimonial data:', error);
+        setTestimonial({
+          author_name: "Sultan Ali",
+          description: "Propellus has made our and our travelers lives easier.",
+          country_name: "Prince Visa"
+        });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTestimonial();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="bg-gray-50 py-12 px-6 sm:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-center items-center h-64">
+            <div className="text-gray-500">Loading testimonial...</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+>>>>>>> c15769c (strapi)
   return (
     <>
       {/* Testimonial Section */}
@@ -30,8 +97,17 @@ const TravelAgentLove = () => {
           <div className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-12 p-8 bg-white rounded-3xl shadow-lg">
             <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-48 lg:h-48 rounded-2xl overflow-hidden flex-shrink-0 mb-6 lg:mb-0">
               <Image
+<<<<<<< HEAD
                 src="/images/person.png"
                 alt="Sultan Ali"
+=======
+                src={
+                  testimonial?.author_image?.url
+                    ? `${process.env.NEXT_PUBLIC_STRAPI_URL || "http://127.0.0.1:1337"}${testimonial.author_image.url}`
+                    : "/images/person.png"
+                }
+                alt={testimonial?.author_name || "Author"}
+>>>>>>> c15769c (strapi)
                 layout="fill"
                 objectFit="cover"
                 className="rounded-2xl"
@@ -43,6 +119,7 @@ const TravelAgentLove = () => {
                 “
               </div>
               <div className="relative z-10 text-2xl sm:text-3xl font-semibold text-gray-800 italic leading-relaxed pt-8 lg:pt-0">
+<<<<<<< HEAD
                 Propellus has made our and our travelers lives easier.
               </div>
               <div className="mt-6 font-semibold text-gray-900">
@@ -50,6 +127,15 @@ const TravelAgentLove = () => {
               </div>
               <div className="text-sm text-gray-500">
                 Prince Visa
+=======
+                {testimonial?.description || "Propellus has made our and our travelers lives easier."}
+              </div>
+              <div className="mt-6 font-semibold text-gray-900">
+                {testimonial?.author_name || "Sultan Ali"}
+              </div>
+              <div className="text-sm text-gray-500">
+                {testimonial?.country_name || "Prince Visa"}
+>>>>>>> c15769c (strapi)
               </div>
             </div>
           </div>

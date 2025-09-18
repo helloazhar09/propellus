@@ -1,6 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+<<<<<<< HEAD
+=======
+import Image from "next/image";
+>>>>>>> c15769c (strapi)
 
 // Define types for dropdown state
 type DropdownType = "destination" | "residency" | "nationality";
@@ -92,12 +96,21 @@ const HeroSection = () => {
     options,
     value,
   }) => (
+<<<<<<< HEAD
     <div className="space-y-2 relative">
       <label className="text-sm font-medium text-gray-700">{label}</label>
       <div className="relative">
         <button
           onClick={() => toggleDropdown(type)}
           className={`w-full p-3 border border-gray-300 rounded-md bg-white text-left focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent ${
+=======
+    <div className="space-y-2 border-r-[1px] broder-gray-200  relative">
+      <label className="text-lg text-black font-medium">{label}</label>
+      <div className="relative  ">
+        <button
+          onClick={() => toggleDropdown(type)}
+          className={`w-full p-3 rounded-md bg-white text-left focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent ${
+>>>>>>> c15769c (strapi)
             value === "Please Select" ? "text-gray-500" : "text-gray-700"
           }`}
         >
@@ -147,8 +160,13 @@ const HeroSection = () => {
         </div>
 
         {/* Search Form */}
+<<<<<<< HEAD
         <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6 mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+=======
+        <div className="w-full max-w-6xl bg-white rounded-lg shadow-lg p-3 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+>>>>>>> c15769c (strapi)
             {/* Use CustomDropdown for each dropdown */}
             <CustomDropdown
               label="Destination"
@@ -168,6 +186,7 @@ const HeroSection = () => {
               options={nationalityOptions}
               value={dropdowns.nationality.selected}
             />
+<<<<<<< HEAD
           </div>
 
           {/* Search Button */}
@@ -175,11 +194,20 @@ const HeroSection = () => {
             <button className="bg-slate-800 hover:bg-slate-900 text-white font-semibold py-3 px-8 rounded-md transition-colors duration-200">
               Search
             </button>
+=======
+            {/* Search Button */}
+            <div className="mt-6 flex justify-end">
+              <button className="bg-slate-800 hover:bg-slate-900 text-white font-semibold py-3 px-8 rounded-md transition-colors duration-200">
+                Search
+              </button>
+            </div>
+>>>>>>> c15769c (strapi)
           </div>
         </div>
 
         {/* Trusted By Section */}
         <div className="text-center">
+<<<<<<< HEAD
           <h2 className="text-white text-lg font-semibold mb-8 tracking-wide">
             TRUSTED BY LEADING TRAVEL AGENCIES
           </h2>
@@ -213,6 +241,19 @@ const HeroSection = () => {
             <div className="border-2 border-white text-white px-3 py-1 text-lg font-bold">
               AEG
             </div>
+=======
+          <h2 className="text-black text-[18px] md:text-[24px] font-normal mb-8 tracking-wide">
+            TRUSTED BY LEADING TRAVEL AGENCIES
+          </h2>
+          <div className="flex flex-wrap justify-center items-center ">
+            <Image
+              src={"/logos.svg"}
+              alt="Logo 1"
+              width={120}
+              height={40}
+              className="object-contain w-full h-auto"
+            />
+>>>>>>> c15769c (strapi)
           </div>
         </div>
       </div>

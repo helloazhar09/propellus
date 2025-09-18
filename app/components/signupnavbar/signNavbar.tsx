@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
+>>>>>>> c15769c (strapi)
 
 const SignNavbar = () => {
   const [isHelpOpen, setIsHelpOpen] = useState(false);
@@ -10,6 +17,7 @@ const SignNavbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
+<<<<<<< HEAD
           <div className="flex-shrink-0 flex items-center">
             <svg
               className="h-8 w-auto text-cyan-500"
@@ -41,6 +49,16 @@ const SignNavbar = () => {
               Propellus
             </span>
           </div>
+=======
+          <Link href="/" className="flex-shrink-0 flex items-center">
+            <Image
+              src={"logo.svg"}
+              alt="Propellus Logo"
+              width={120}
+              height={50}
+            />
+          </Link>
+>>>>>>> c15769c (strapi)
 
           {/* Nav links and buttons */}
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8 sm:items-center">

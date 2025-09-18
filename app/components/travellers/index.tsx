@@ -1,5 +1,6 @@
 "use client";
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -38,6 +39,112 @@ const TestimonialsSection = () => {
       bgColor: "bg-orange-50"
     }
   ];
+=======
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import { TestimonialData } from '../../types/strapi';
+
+interface TestimonialWithBg extends TestimonialData {
+  bgColor: string;
+}
+
+const TestimonialsSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [testimonials, setTestimonials] = useState<TestimonialWithBg[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const bgColors = ["bg-cyan-50", "bg-green-50", "bg-purple-50", "bg-blue-50", "bg-orange-50"];
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await fetch('/api/strapi-data');
+        const data = await response.json();
+        console.log('Testimonials data received:', data);
+        
+        // Check if we got an error response from the API
+        if (data.error) {
+          console.warn('Strapi connection failed:', data.error);
+          console.warn('Using fallback testimonials data');
+          // Use fallback data when Strapi is not available
+          setTestimonials([
+            {
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+              author_name: "Ranjan Kumar",
+              country_name: "India",
+              bgColor: "bg-cyan-50"
+            },
+            {
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+              author_name: "Thabo Mlambo",
+              country_name: "South Africa",
+              bgColor: "bg-green-50"
+            },
+            {
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+              author_name: "Mohammed al Imran Hafeez",
+              country_name: "Pakistan",
+              bgColor: "bg-purple-50"
+            }
+          ]);
+        } else if (data.testimonials && Array.isArray(data.testimonials)) {
+          console.log('Using Strapi testimonials data');
+          const testimonialsWithBg = data.testimonials.map((testimonial: TestimonialData, index: number) => ({
+            ...testimonial,
+            bgColor: bgColors[index % bgColors.length]
+          }));
+          setTestimonials(testimonialsWithBg);
+        } else {
+          console.warn('No testimonials found in Strapi data, using fallback');
+          // Fallback to default testimonials if no data from Strapi
+          setTestimonials([
+            {
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+              author_name: "Ranjan Kumar",
+              country_name: "India",
+              bgColor: "bg-cyan-50"
+            },
+            {
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+              author_name: "Thabo Mlambo",
+              country_name: "South Africa",
+              bgColor: "bg-green-50"
+            },
+            {
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+              author_name: "Mohammed al Imran Hafeez",
+              country_name: "Pakistan",
+              bgColor: "bg-purple-50"
+            }
+          ]);
+        }
+      } catch (error) {
+        console.error('Error fetching testimonials:', error);
+        // Fallback to default testimonials
+        setTestimonials([
+          {
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+            author_name: "Ranjan Kumar",
+            country_name: "India",
+            bgColor: "bg-cyan-50"
+          },
+          {
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+            author_name: "Thabo Mlambo",
+            country_name: "South Africa",
+            bgColor: "bg-green-50"
+          }
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTestimonials();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+>>>>>>> c15769c (strapi)
 
   const nextSlide = () => {
     setCurrentSlide((prev) => 
@@ -60,6 +167,21 @@ const TestimonialsSection = () => {
     return visible;
   };
 
+<<<<<<< HEAD
+=======
+  if (loading) {
+    return (
+      <div className="bg-white py-16 px-6 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-center items-center h-64">
+            <div className="text-gray-500">Loading testimonials...</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+>>>>>>> c15769c (strapi)
   return (
     <div className="bg-white py-16 px-6 sm:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
@@ -75,20 +197,36 @@ const TestimonialsSection = () => {
               onClick={prevSlide}
               className="w-10 h-10 rounded-full border border-gray-300 hover:border-gray-400 flex items-center justify-center transition-colors duration-200 group"
               aria-label="Previous testimonials"
+<<<<<<< HEAD
             >
               <ChevronLeft 
                 size={20} 
                 className="text-gray-600 group-hover:text-gray-800" 
+=======
+              disabled={testimonials.length === 0}
+            >
+              <ChevronLeft
+                size={20}
+                className="text-gray-600 group-hover:text-gray-800"
+>>>>>>> c15769c (strapi)
               />
             </button>
             <button
               onClick={nextSlide}
               className="w-10 h-10 rounded-full border border-gray-300 hover:border-gray-400 flex items-center justify-center transition-colors duration-200 group"
               aria-label="Next testimonials"
+<<<<<<< HEAD
             >
               <ChevronRight 
                 size={20} 
                 className="text-gray-600 group-hover:text-gray-800" 
+=======
+              disabled={testimonials.length === 0}
+            >
+              <ChevronRight
+                size={20}
+                className="text-gray-600 group-hover:text-gray-800"
+>>>>>>> c15769c (strapi)
               />
             </button>
           </div>
@@ -103,28 +241,61 @@ const TestimonialsSection = () => {
             >
               {/* Quote */}
               <div className="mb-6">
+<<<<<<< HEAD
                 <p className="text-gray-700 leading-relaxed">
                   &ldquo;{testimonial.text}&rdquo;
+=======
+                <p className="text-gray-600 leading-relaxed">
+                  &ldquo;{testimonial.description}&rdquo;
+>>>>>>> c15769c (strapi)
                 </p>
               </div>
 
               {/* Author Info */}
               <div className="border-t border-gray-200 pt-4">
                 <div className="flex items-center space-x-3">
+<<<<<<< HEAD
                   {/* Avatar Placeholder */}
                   <div className="w-10 h-10 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-full flex items-center justify-center">
                     <span className="text-white font-semibold text-sm">
                       {testimonial.author.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
+=======
+                  {/* Avatar - Use author_image if available, otherwise show initials */}
+                  {testimonial.author_image ? (
+                    <div className="w-10 h-10 rounded-full overflow-hidden">
+                      <Image
+                        src={`${process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337'}${testimonial.author_image.url}`}
+                        alt={testimonial.author_image.alternativeText || testimonial.author_name}
+                        width={40}
+                        height={40}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-10 h-10 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-full flex items-center justify-center">
+                      <span className="text-white font-semibold text-sm">
+                        {testimonial.author_name.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
+                  )}
+>>>>>>> c15769c (strapi)
                   
                   {/* Name and Location */}
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm">
+<<<<<<< HEAD
                       {testimonial.author}
                     </h4>
                     <p className="text-gray-600 text-xs">
                       {testimonial.location}
+=======
+                      {testimonial.author_name}
+                    </h4>
+                    <p className="text-gray-600 text-xs">
+                      {testimonial.country_name}
+>>>>>>> c15769c (strapi)
                     </p>
                   </div>
                 </div>

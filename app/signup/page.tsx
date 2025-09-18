@@ -89,7 +89,13 @@ const SignupPage = () => {
                     type="button"
                     onClick={togglePasswordVisibility}
                     className="text-gray-400 hover:text-gray-600 focus:outline-none"
+<<<<<<< HEAD
                     aria-label={showPassword ? "Hide password" : "Show password"}
+=======
+                    aria-label={
+                      showPassword ? "Hide password" : "Show password"
+                    }
+>>>>>>> c15769c (strapi)
                   >
                     {showPassword ? (
                       <EyeSlashIcon className="h-5 w-5" />
@@ -112,7 +118,12 @@ const SignupPage = () => {
                 htmlFor="remember-me"
                 className="ml-2 block text-sm text-gray-900"
               >
+<<<<<<< HEAD
                 I agree to the <span className="font-medium">Terms and Conditions</span>
+=======
+                I agree to the{" "}
+                <span className="font-medium">Terms and Conditions</span>
+>>>>>>> c15769c (strapi)
               </label>
             </div>
 
@@ -159,7 +170,11 @@ const SignupPage = () => {
           <div className="text-center text-sm text-gray-500 mt-4">
             Already have an account?{" "}
             <a
+<<<<<<< HEAD
               href="#"
+=======
+              href="/login"
+>>>>>>> c15769c (strapi)
               className="font-medium text-blue-600 hover:text-blue-500"
             >
               Login
@@ -171,4 +186,8 @@ const SignupPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default SignupPage;
+=======
+export default SignupPage;
+>>>>>>> c15769c (strapi)

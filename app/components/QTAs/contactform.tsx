@@ -1,5 +1,9 @@
 "use client";
 
+<<<<<<< HEAD
+=======
+import Image from "next/image";
+>>>>>>> c15769c (strapi)
 import React, { useState } from "react";
 
 const GetStartedComponent = () => {
@@ -11,11 +15,23 @@ const GetStartedComponent = () => {
     message: "",
   });
 
+<<<<<<< HEAD
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
+=======
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+>>>>>>> c15769c (strapi)
     e.preventDefault();
     console.log("Form submitted:", form);
   };
@@ -46,28 +62,44 @@ const GetStartedComponent = () => {
             TRUSTED BY LEADING TRAVEL AGENCIES
           </p>
           <div className="flex items-center gap-6 mt-4">
+<<<<<<< HEAD
             <img
+=======
+            <Image
+>>>>>>> c15769c (strapi)
               src="/images/image 147.png"
               alt="Aeg"
               width={80}
               height={40}
               className="opacity-50"
             />
+<<<<<<< HEAD
             <img
+=======
+            <Image
+>>>>>>> c15769c (strapi)
               src="/images/image 149.png"
               alt="Wego"
               width={80}
               height={40}
               className="opacity-50"
             />
+<<<<<<< HEAD
             <img
+=======
+            <Image
+>>>>>>> c15769c (strapi)
               src="/images/image 146.png"
               alt="Gozayaan"
               width={50}
               height={20}
               className="opacity-50"
             />
+<<<<<<< HEAD
             <img
+=======
+            <Image
+>>>>>>> c15769c (strapi)
               src="/images/image 148.png"
               alt="PrinceVisa"
               width={80}
@@ -80,7 +112,11 @@ const GetStartedComponent = () => {
         {/* Right Section (Form) */}
         <div className="bg-white rounded-lg p-6 w-full max-w-lg mx-auto text-center shadow-lg">
           {/* Centered Heading */}
+<<<<<<< HEAD
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
+=======
+          <h3 className="text-[28px] font-semibold text-black mb-4">
+>>>>>>> c15769c (strapi)
             Tell us about you
           </h3>
 
@@ -102,7 +138,11 @@ const GetStartedComponent = () => {
                   placeholder="e.g John Doe"
                   value={form.yourName}
                   onChange={handleChange}
+<<<<<<< HEAD
                   className="w-full border border-gray-300 rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                  className="w-full border border-gray-300 rounded-md p-2 text-sm text-black placeholder:text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> c15769c (strapi)
                   required
                 />
               </div>
@@ -120,7 +160,11 @@ const GetStartedComponent = () => {
                   placeholder="Company Name"
                   value={form.companyName}
                   onChange={handleChange}
+<<<<<<< HEAD
                   className="w-full border border-gray-300 rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                  className="w-full border border-gray-300 rounded-md p-2 text-sm text-black placeholder:text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> c15769c (strapi)
                   required
                 />
               </div>
@@ -142,7 +186,11 @@ const GetStartedComponent = () => {
                   placeholder="johndoe@gmail.com"
                   value={form.email}
                   onChange={handleChange}
+<<<<<<< HEAD
                   className="w-full border border-gray-300 rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                  className="w-full border border-gray-300 rounded-md p-2 text-sm text-black placeholder:text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> c15769c (strapi)
                   required
                 />
               </div>
@@ -158,7 +206,11 @@ const GetStartedComponent = () => {
                   name="weAre"
                   value={form.weAre}
                   onChange={handleChange}
+<<<<<<< HEAD
                   className="w-full border border-gray-300 rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                  className="w-full border border-gray-300 rounded-md p-2 text-sm text-black placeholder:text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> c15769c (strapi)
                   required
                 >
                   <option value="" disabled>
@@ -192,13 +244,18 @@ const GetStartedComponent = () => {
             {/* Colored Button */}
             <button
               type="submit"
+<<<<<<< HEAD
               className="w-full bg-[#1C3F5D] text-white text-sm font-medium py-2 rounded-md hover:opacity-90 transition"
+=======
+              className="w-full bg-[#1C3F5D] text-white text-[16px] font-medium py-2 rounded-md hover:opacity-90 transition"
+>>>>>>> c15769c (strapi)
             >
               Submit
             </button>
           </form>
 
           {/* Terms Text Centered */}
+<<<<<<< HEAD
           <p className="text-[11px] text-gray-500 mt-3 leading-snug text-center">
             By submitting this form, you are agreeing to Propellus{" "}
             <a href="#" className="underline">
@@ -206,6 +263,15 @@ const GetStartedComponent = () => {
             </a>{" "}
             and{" "}
             <a href="#" className="underline">
+=======
+          <p className="text-[12px] max-w-[350px] mx-auto text-gray-500 mt-3 leading-snug text-center">
+            By submitting this form, you are agreeing to Propellus{" "}
+            <a href="#" className="text-[#1C3F5D] font-semibold underline">
+              Privacy Policy
+            </a>{" "}
+            <span className="text-[#1C3F5D] font-semibold"> and </span>
+            <a href="#" className="text-[#1C3F5D] font-semibold underline">
+>>>>>>> c15769c (strapi)
               Terms of Service
             </a>
             .

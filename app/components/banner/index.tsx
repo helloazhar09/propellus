@@ -3,8 +3,13 @@ import { X } from "lucide-react";
 
 const TopBanner = () => {
   return (
+<<<<<<< HEAD
     <div className="bg-gray-800 text-white py-3 px-4 relative">
       <div className="text-center text-sm">
+=======
+    <div className="bg-[#222222] text-white py-3 px-4 relative">
+      <div className="text-center text-md">
+>>>>>>> c15769c (strapi)
         Propellus is currently serving customers in the UK market.
       </div>
       <button className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300">
